@@ -1,0 +1,44 @@
+{# Navbar #}
+{% if page.navigation or page.navigation_collapsible %}
+  {% block navbar %}
+    {%
+      set navbar_classes = [
+        'navbar',
+        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+      ]
+    %}
+    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+      <div class="{{ container }} ">
+        <div class="navbar-header">
+          {# .btn-navbar is used as the toggle for collapsed navbar content #}
+          {% if page.navigation_collapsible %}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="navbar-toggle-lbl">{{ 'Menu'|t }}</span>
+            </button>
+          {% endif %}
+          {{ page.navigation }}
+        </div>
+        {# Navigation (collapsible) #}
+        {% if page.navigation_collapsible %}
+          <div class="navbar-collapse collapse">
+            {{ page.navigation_collapsible }}
+          </div>
+        {% endif %}
+      </div>
+    </header>
+  {% endblock %}
+{% endif %}
+
+{# Panorama #}
+{% if page.panorama %}
+  {% block panorama %}
+  <section role="banner" class="panorama">
+    {{ page.panorama }}
+  </section>
+  {% endblock %}  
+{% endif %}

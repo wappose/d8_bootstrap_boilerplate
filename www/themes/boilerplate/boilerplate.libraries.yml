@@ -1,0 +1,30 @@
+bootstrap-scripts:
+  js:
+    assets/javascripts/bootstrap/affix.js: {}
+    assets/javascripts/bootstrap/alert.js: {}
+    assets/javascripts/bootstrap/button.js: {}
+    assets/javascripts/bootstrap/carousel.js: {}
+    assets/javascripts/bootstrap/collapse.js: {}
+    assets/javascripts/bootstrap/dropdown.js: {}
+#    assets/javascripts/bootstrap/modal.js: {}
+    assets/javascripts/bootstrap/tooltip.js: {}
+    assets/javascripts/bootstrap/popover.js: {}
+#    assets/javascripts/bootstrap/scrollspy.js: {}
+    assets/javascripts/bootstrap/tab.js: {}
+    assets/javascripts/bootstrap/transition.js: {}
+
+#typekit:
+#  version: 1.x
+#  header: true
+#  js:
+#    https://use.typekit.net/who7qme.js: { every_page: true }
+#    assets/javascripts/inittypekit.js: { every_page: true }
+
+global-styling:
+  css:
+    theme:
+      assets/stylesheets/style.css: {}
+
+scripts:
+  js:
+    assets/javascripts/scripts.js: {}

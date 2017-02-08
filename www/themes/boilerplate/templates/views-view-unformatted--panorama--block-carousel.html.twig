@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div id="carousel-{{ view.id }}" class="carousel slide" data-ride="carousel">
+{% if rows|length > 1 %}
+  <ol class="carousel-indicators">
+{% for row in rows %}
+    <li data-target="#carousel-{{ view.id }}" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
+{% endfor %}
+  </ol>
+{% endif %}
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'item', 
+      loop.first ? 'active', 
+      default_row_class ? 'views-row',
+    ]
+  %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+    </div>
+{% endfor %}
+
+  </div>
+
+{% if rows|length > 1 %}
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-{{ view.id }}" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Föregående</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-{{ view.id }}" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Nästa</span>
+  </a>
+{% endif %}
+</div>

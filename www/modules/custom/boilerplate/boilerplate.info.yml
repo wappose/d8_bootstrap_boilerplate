@@ -1,0 +1,20 @@
+name: Boilerplate module
+description: Only depend on other necessary modules required to build a webbsite
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:views
+  - ctools:ctools
+  - token:token
+  - menu_block:menu_block
+  - pathauto:pathauto
+  - redirect:redirect
+  - redirect:redirect_404
+  - scheduler:scheduler
+  - editor_file:editor_file
+  - google_analytics:google_analytics
+
+  

@@ -1,0 +1,163 @@
+.nav > li > a:hover, .nav > li > a:focus {
+	background: transparent;
+}
+
+.navbar-header {
+	a.logo {
+		img {
+			height: 63px;
+    		width: 60px;
+    		margin: 5px 10px;
+    		@include respond-to(monitor) {
+    			margin: 0;
+				height: 128px;
+				width: 120px;
+    		}
+		}
+	}
+	.navbar-toggle {
+		border: 0;
+		width: 56px;
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 0;
+		.icon-bar {
+			background-color: $nav-toggle-color;
+			border-radius: 2px;
+			height: 4px;
+			display: block;
+			width: auto;
+		}
+		.navbar-toggle-lbl {
+			font-size: 1.6em;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.region-navigation-collapsible {
+	@include respond-to(monitor) {
+		@include flexbox-display();
+		@include flexbox-flex-direction(column-reverse);
+		@include flexbox-justify-content(space-around);
+	}
+	nav {
+		display: block;
+		@include respond-to(monitor) {
+			margin-right: -15px;
+		}
+		ul.menu {
+			float: none;
+			margin-top: 0;
+			margin-bottom: 0;
+			@include respond-to(monitor) {
+				float: right;
+			}
+			li {
+				border-top: 1px solid black;
+				font-size: 2.2rem;
+				float: none;
+				text-transform: uppercase;
+//				font-family: $primary-font-family;
+				font-weight: 600;
+				position: relative;
+				@include respond-to(monitor) {
+					border: 0;
+					font-size: 2.8rem;
+					float: left;
+					a {
+						&.collapse-toggle {
+							display: none;
+						}
+					}
+					ul.menu {
+						display: none;	
+					}
+				}
+				@include respond-to(tablet) {
+					font-size: 2.2rem;
+				}
+				a {
+					padding-left: 15px;
+					padding-left: 1.5rem;
+					padding-right: 15px;
+					padding-right: 1.5rem;
+					@include respond-to(tablet) {
+						padding-left: 10px;
+						padding-left: 1rem;
+						padding-right: 10px;
+						padding-right: 1rem;
+					}
+					color: $navbar-default-color;
+					display: block;
+					height: 100%;
+					line-height: normal;
+
+					&.collapse-toggle {
+						padding: 10px;
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: auto;
+						z-index: 20;
+					}
+					.glyphicon {
+						line-height: normal;
+					}
+				}
+				ul.menu {
+					padding-left:0;
+				}
+				&.active-trail {
+					> a {
+						background-color: $navbar-default-link-active-bg;
+						color: $navbar-default-link-active-color;
+					}
+				}
+				@include respond-to(handheld) {
+					ul {
+						li {
+							a {
+								padding: 10px 15px;
+								padding-left: 25px;
+							}
+							li {
+								a {
+									padding-left: 35px;
+								}
+								li {
+									a {
+										padding-left: 45px;
+									}
+									li {
+										a {
+											padding-left: 55px;
+										}
+									}
+								}
+							}
+						}  
+					}
+				}
+			}
+		}
+	}
+/*	#block-secondarymenu {
+		ul.menu {
+			li {
+				&:last-child {
+					border-bottom: 1px solid $bg-gray;
+				}
+				@include respond-to(monitor) {
+					font-size: 1.8em;
+					a {
+						color: $text-gray-lighter;
+					}
+					&:last-child {
+						border: 0;
+					}
+				}	
+			}
+		}
+	}*/
+}

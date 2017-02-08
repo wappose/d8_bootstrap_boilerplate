@@ -1,0 +1,49 @@
+header.navbar-default  {
+
+	@if $header-bg {
+		background-color: $header-bg;
+	}
+	@if $navbar-border-width {
+		border-width: $navbar-border-width;
+	}
+	
+
+	min-height: $navbar-default-height;
+	@include respond-to(monitor) {
+		min-height: $navbar-monitor-height;
+	}
+
+	.navbar-header {
+		a.logo {
+			display: block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+	    	@include respond-to(monitor) {
+				padding-top: 45px;
+				padding-bottom: 40px;
+	    	}
+			img {
+				height: 30px;
+	    		margin: 5px 10px;
+	    		@include respond-to(monitor) {
+	    			margin: 0;
+					height: 60px;
+	    		}
+			}
+		}
+		.navbar-toggle {
+			@include toggle-open-3($nav-toggle-color);
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+
+		
+	}
+
+	@import 'main_navigation'
+
+}
+
+section.panorama {
+
+}

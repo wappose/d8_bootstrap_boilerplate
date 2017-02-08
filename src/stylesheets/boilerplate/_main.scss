@@ -1,0 +1,38 @@
+html, body {
+	font-size: floor($font-size-base - 1);
+	@include respond-to(large-desktop) {
+		font-size: $font-size-base;
+	}
+}
+
+body {
+	margin-top: 0;
+	h1 {
+		font-weight: 600;
+	}
+	h2, h3, h4 {
+		font-weight: 600;
+	}
+	a {
+		&:hover, &:active {
+			background-color: transparent;
+		}
+	}
+	strong {
+		font-weight: 600;
+	}
+	.main-container, 
+	.footer,
+	.panorama,
+	.footer, 
+	.sub-content {
+		font-size: 1.8em;
+	}
+
+	@import 'carousel';
+	@import 'header';
+	@import 'front';
+	@import 'content';
+	@import 'footer';
+	
+}

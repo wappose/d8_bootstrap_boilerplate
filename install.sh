@@ -18,4 +18,12 @@ sed -i "s/boilerplate/$pname/" www/themes/$pname/config/schema/$pname.schema.yml
 sed -i "s/boilerplate/$pname/" src/stylesheets/style.scss
 sed -i "s/boilerplate/$pname/" sasswatch.sh
 
-rm -- "$0"
+
+chmod +w www/sites/default/settings.php
+chmod +w www/sites/default
+sed -i "s/boilerplate/$pname/" www/sites/default/settings.php
+chmod -w www/sites/default/settings.php
+chmod -w www/sites/default
+
+#(cd www && drush sql-create -y)
+#rm -- "$0"

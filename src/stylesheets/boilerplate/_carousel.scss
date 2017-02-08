@@ -1,0 +1,77 @@
+.carousel {
+	.views-field-field-image {
+		.field-content {
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.carousel-caption {
+		text-shadow: none;
+		top: 0;
+
+		@include respond-to(phone) {
+			right: floor($grid-gutter-width/2);
+			left: floor($grid-gutter-width/2);
+			padding-top: floor($grid-gutter-width/2);
+		}
+		@include respond-to(monitor) {
+			left: 50%;
+		}
+		@include respond-to(large-desktop) {
+			margin-left: floor(-550px);
+			top: 40px;
+			width: 600px;
+		}
+		@include respond-to(desktop) {
+			top: 20px;
+			margin-left: floor(-480px);
+			width: 500px;
+		}
+		@include respond-to(tablet) {
+			top: 10px;
+			margin-left: floor(-360px);
+			width: 370px;
+		}
+
+		.views-field {
+			margin-bottom: 5px;
+			margin-bottom: 0.5rem;
+			@include respond-to(monitor) {
+				margin-bottom: 12px;
+				margin-bottom: 1.2rem;
+			}
+			text-align: left;
+			.field-content, h1 {
+				opacity: 0.85;
+				background-color: white;
+				padding: 5px;
+				display: inline-block;
+				@include respond-to(monitor) {
+					color: black;
+					padding: 15px;
+				}
+			}
+			h1 {
+				margin: 0;
+				color: black;
+				@include respond-to(phone) {
+					font-size: 3.5em;
+				}
+			}
+			p {
+				font-size: 2.4em;
+			}
+		}
+	}
+	@include respond-to(phone) {
+		.views-row {
+			.views-field-field-image {
+				margin-left: -300px;
+				margin-right: -300px;
+			}
+		}
+	}
+
+}

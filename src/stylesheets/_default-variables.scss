@@ -1,0 +1,99 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+
+$icon-font-path: '../fonts/bootstrap/';
+//$fa-font-path: '../fonts/font-awesome/';
+
+$brand-primary: #ccccff;
+
+
+/* FONT SETTINGS */
+$text-color: #424242;
+//$link-color: $brand-primary;
+$heading-color: $brand-primary;
+
+$font-family-base: 'myriad-pro', sans-serif; 
+$headings-font-family: "proxima-nova-alt-condensed", sans-serif;
+$headings-font-weight: 600;
+$font-size-base: 16px;
+
+
+/* GRID SETTINGS */
+$grid-gutter-width: 20px;
+
+
+/* no damn rounded stuff */
+$border-radius-base:   0;
+$border-radius-large:  0;
+$border-radius-small:  0;
+
+//$btn-border-radius-base:         0;
+//$btn-border-radius-large:        0;
+//$btn-border-radius-small:        0;
+
+//$input-border-radius:        0; 
+//$input-border-radius-large:  0; 
+//$input-border-radius-small:  0; 
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-height:                            120px;
+$navbar-default-height:                    60px;
+$navbar-monitor-height:                    $navbar-height;
+$navbar-margin-bottom:                     0;
+//$navbar-border-radius:                   0;
+$navbar-border-width:                      0;
+$navbar-padding-horizontal:                10px;
+//$navbar-padding-vertical:  (($navbar-height - $line-height-computed) / 2) !default;
+//$navbar-collapse-max-height:       340px !default;
+
+$navbar-default-color:             $text-color;
+$navbar-default-bg:                transparent;
+$navbar-default-border:            transparent;
+
+// // Navbar links
+$navbar-default-link-color:                $text-color;
+$navbar-default-link-hover-color:          $text-color;
+$navbar-default-link-hover-bg:             transparent;
+
+$navbar-default-link-active-color:         $text-color;
+$navbar-default-link-active-bg:            transparent;
+
+// // Navbar toggle
+$navbar-default-toggle-hover-bg:           transparent;
+$navbar-default-toggle-icon-bar-bg:        transparent;
+$navbar-default-toggle-border-color:       transparent;
+
+//Subnav
+$nav-default-bg: transparent;
+$nav-active-bg: transparent;
+$nav-toggle-color: $text-color;
+
+//** Global textual link color.
+
+$left-nav-link-color: $text-color;
+$left-nav-link-hover-color: $text-color;
+$left-nav-link-active-color: $brand-primary;
+
+
+//** Background color for `<body>`.
+$body-bg:                                  transparent;
+$header-bg:                                $brand-primary;
+$panorama-bg:                              #fff;
+$main-bg:                                  #fff;
+$footer-bg:                                $brand-primary;
